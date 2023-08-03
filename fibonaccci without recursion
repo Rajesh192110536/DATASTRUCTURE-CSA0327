@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    unsigned long long fib1 = 0, fib2 = 1, nextTerm;
+
+    printf("Enter the number of terms in the Fibonacci series: ");
+    scanf("%d", &n);
+
+    printf("Fibonacci Series: ");
+
+    for (i = 1; i <= n; ++i) {
+        // Print the current Fibonacci number
+        printf("%llu, ", fib1);
+
+        // Calculate the next Fibonacci number
+        nextTerm = fib1 + fib2;
+        fib1 = fib2;
+        fib2 = nextTerm;
+    }
+
+    printf("\n");
+    return 0;
+}
